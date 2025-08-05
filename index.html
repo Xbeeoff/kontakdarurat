@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomor Tanggap Darurat Jakarta Timur</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --red: #ff4c4c;
+      --dark: #1e1e1e;
+      --light-dark: #2e2e2e;
+      --white: #ffffff;
+      --gray: #cccccc;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(to right, #7f0000, #000000);
+      color: var(--white);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--red);
+      text-shadow: 2px 2px 6px #000;
+      margin-bottom: 10px;
+    }
+
+    .time-date {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-top: 5px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--light-dark);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 8px 16px rgba(255, 76, 76, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--red);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(255, 76, 76, 0.4);
+    }
+
+    .card i {
+      font-size: 50px;
+      color: var(--red);
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #00c853;
+      color: #fff;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      margin-bottom: 12px;
+    }
+
+    .card a {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--white);
+      text-decoration: none;
+      background: var(--red);
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      transition: background 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .card a:hover {
+      background: #cc0000;
+    }
+
+    .card img {
+      display: block;
+      margin: 15px auto 0;
+      width: 110px;
+      height: 110px;
+      border-radius: 10px;
+      border: 2px solid var(--red);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid #444;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    @media(max-width: 400px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><i class="fas fa-phone-volume"></i> Nomor Tanggap Darurat Jak Lingko Puskopau</h1>
+    <div class="time-date" id="timeDate">Memuat waktu...</div>
+  </div>
+
+  <div class="card-container">
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-ambulance"></i>
+      <h3>Ambulans / Dinas Kesehatan</h3>
+      <a href="tel:119">📞 119</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:119" alt="QR Ambulans">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-fire-extinguisher"></i>
+      <h3>Pemadam Kebakaran Jaktim</h3>
+      <a href="tel:+62218194085">📞 (021) 819-4085</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:+62218194085" alt="QR Damkar">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-shield-alt"></i>
+      <h3>Polres Metro Jakarta Timur</h3>
+      <a href="tel:+62218191472">📞 (021) 819-1472</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:+62218191472" alt="QR Polres">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-hospital-alt"></i>
+      <h3>RSUD Jakarta Timur</h3>
+      <a href="tel:+622129847825">📞 (021) 2984-7825</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:+622129847825" alt="QR RSUD">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-bolt"></i>
+      <h3>PLN Jakarta Timur</h3>
+      <a href="tel:123">📞 123</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:123" alt="QR PLN">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-water"></i>
+      <h3>PDAM PAM Jaya</h3>
+      <a href="tel:+62213861234">📞 (021) 386-1234</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:+62213861234" alt="QR PDAM">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-building"></i>
+      <h3>Kantor Walikota Jaktim</h3>
+      <a href="tel:+622148704455">📞 (021) 4870-4455</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:+622148704455" alt="QR Walikota">
+    </div>
+
+    <div class="card">
+      <div class="badge">Layanan Aktif</div>
+      <i class="fas fa-users"></i>
+      <h3>SATPOL PP Jakarta Timur</h3>
+      <a href="tel:+62218192043">📞 (021) 819-2043</a>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=tel:+62218192043" alt="QR Satpol PP">
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 | Pusat Tanggap Darurat Jakarta Timur. Semua layanan aktif 24 jam.
+  </footer>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const days = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+      const months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+
+      const day = days[now.getDay()];
+      const date = now.getDate();
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
+
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+
+      hours = hours < 10 ? '0' + hours : hours;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      const fullDate = `${day}, ${date} ${month} ${year}`;
+      const fullTime = `${hours}:${minutes}:${seconds} WIB`;
+
+      document.getElementById('timeDate').innerHTML = `${fullDate} - ${fullTime}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+
+</body>
+</html>
